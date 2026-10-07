@@ -1,0 +1,62 @@
+# --- Секреты ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# --- Рабочие данные бота (создаются автоматически) ---
+vehicles.db
+vehicles.db-wal
+vehicles.db-shm
+*.db-journal
+backups/
+cache_plates.json
+cache_plates.json.tmp
+cache_plates.json.migrated
+translation_cache.json
+usage_counters.json
+*.tmp
+
+# --- Логи ---
+logs/
+*.log
+
+# --- Дампы экранов и скриншоты для разбора сбоев ---
+carmoodo_debug_*.xml
+heydealer_debug_*.xml
+adsid_debug_*.xml
+debug_screenshots/
+*.zip
+# Дампы, на которые опираются тесты, хранятся в репозитории.
+!tests/fixtures/**/*.xml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# --- Редакторы и инструменты разработки ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- ОС ---
+Thumbs.db
+desktop.ini
+.DS_Store

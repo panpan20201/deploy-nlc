@@ -1,0 +1,23 @@
+# --- Telegram-бот ---
+python-telegram-bot==21.6
+python-dotenv==1.0.1
+
+# --- HeyDealer / Carmoodo (Appium — управление Android-устройством) ---
+# Appium-Python-Client >=2.0.0 обязателен: именно с версии 2.x появился
+# путь импорта "from appium.webdriver.common.appiumby import AppiumBy",
+# который используется в heydealer_history.py и carmoodo_vin.py.
+Appium-Python-Client>=2.11.1
+# selenium ставится автоматически как зависимость Appium-Python-Client,
+# но указан здесь явно — в коде (carmoodo_vin.py) идут прямые импорты из
+# selenium.webdriver.support.*, selenium.common.exceptions и т.д., поэтому
+# лучше зафиксировать это как собственную, а не "случайную" зависимость.
+selenium>=4.15.0
+
+# --- Encar (обычные HTTP-запросы к сайту) ---
+requests>=2.31.0
+
+# --- PARTSNUMBER (Playwright + распознавание экрана через OpenCV) ---
+playwright
+opencv-python
+numpy
+Pillow
